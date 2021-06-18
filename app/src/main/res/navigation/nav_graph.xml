@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. ArseneLupin0.
+  ~
+  ~ Licensed under the GNU General Public License v3.0
+  ~
+  ~ https://www.gnu.org/licenses/gpl-3.0.html
+  ~
+  ~ Permissions of this strong copyleft license are conditioned on making available complete source
+  ~ code of licensed works and modifications, which include larger works using a licensed work,
+  ~ under the same license. Copyright and license notices must be preserved. Contributors provide
+  ~ an express grant of patent rights.
+  -->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_HomeFragment">
+    <fragment
+        android:id="@+id/nav_HomeFragment"
+        android:name="es.miapp.ad.ej5chatclient.view.fragments.Home"
+        android:label="¡Just Chatting!"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_nav_homeFragment_to_exit"
+            app:destination="@id/nav_ExitFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_homeFragment_to_importContacts"
+            app:destination="@id/nav_GlovalChatFragment"
+
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_nav_HomeFragment_to_nav_GlovalChatFragment"
+            app:destination="@id/nav_GlovalChatFragment" />
+        <action
+            android:id="@+id/action_nav_HomeFragment_to_nav_ExitFragment"
+            app:destination="@id/nav_ExitFragment" />
+        <action
+            android:id="@+id/action_nav_HomeFragment_to_nav_PrivateChatFragment"
+            app:destination="@id/nav_PrivateChatFragment" />
+        <action
+            android:id="@+id/action_nav_HomeFragment_to_nav_PrivateChatFragment2"
+            app:destination="@id/nav_PrivateChatFragment" />
+        <action
+            android:id="@+id/action_nav_HomeFragment_to_nav_PrivateChatFragment3"
+            app:destination="@id/nav_PrivateChatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_ExitFragment"
+        android:name="es.miapp.ad.ej5chatclient.view.fragments.CloseSession"
+        android:label="Exit"
+        tools:layout="@layout/fragment_exit" />
+    <fragment
+        android:id="@+id/nav_GlovalChatFragment"
+        android:name="es.miapp.ad.ej5chatclient.view.fragments.GlobalChat"
+        android:label="Global Chat"
+        tools:layout="@layout/fragment_global_chat">
+        <action
+            android:id="@+id/action_nav_GlovalChatFragment_to_nav_HomeFragment"
+            app:destination="@id/nav_HomeFragment" />
+        <action
+            android:id="@+id/action_nav_GlovalChatFragment_to_nav_ExitFragment"
+            app:destination="@id/nav_ExitFragment" />
+        <action
+            android:id="@+id/action_nav_GlovalChatFragment_to_nav_PrivateChatFragment"
+            app:destination="@id/nav_PrivateChatFragment" />
+        <action
+            android:id="@+id/action_nav_GlovalChatFragment_to_nav_HomeFragment2"
+            app:destination="@id/nav_HomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_PrivateChatFragment"
+        android:name="es.miapp.ad.ej5chatclient.view.fragments.PrivateChat"
+        android:label="fragment_private_chat"
+        tools:layout="@layout/fragment_private_chat">
+        <action
+            android:id="@+id/action_nav_PrivateChatFragment_to_nav_ExitFragment"
+            app:destination="@id/nav_ExitFragment" />
+        <action
+            android:id="@+id/action_nav_PrivateChatFragment_to_nav_GlovalChatFragment"
+            app:destination="@id/nav_GlovalChatFragment" />
+        <action
+            android:id="@+id/action_nav_PrivateChatFragment_to_nav_HomeFragment"
+            app:destination="@id/nav_HomeFragment" />
+        <action
+            android:id="@+id/action_nav_PrivateChatFragment_to_nav_GlovalChatFragment2"
+            app:destination="@id/nav_GlovalChatFragment" />
+    </fragment>
+</navigation>
