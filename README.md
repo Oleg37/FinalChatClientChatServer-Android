@@ -1,4 +1,4 @@
-# Final ChatClientChatServer-Android
+# Final ChatServerChatClient-Android
 Proyecto de recuperación -> Número 5 (Android)
 
 ## Contiene:
